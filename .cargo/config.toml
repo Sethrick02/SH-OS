@@ -1,0 +1,11 @@
+[build]
+target = "x86_64-sh_os.json"
+
+[unstable]
+# This tells Rust to recompile the core library for our specific JSON
+build-std = ["core", "compiler_builtins"]
+# This ensures that compiler_builtins doesn't try to use C functions we don't have
+build-std-features = ["compiler-builtins-mem"]
+
+[target.'cfg(all(target_arch = "x86_64", target_os = "none"))']
+runner = "bootimage runner"
