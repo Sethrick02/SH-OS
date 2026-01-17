@@ -12,5 +12,4 @@ To build & run SH-OS:
 - Build the kernal: cargo build
 - Run in QEMU: cargo run
 
-Success! Now you'll see the message: Hello Sh-OS!
-                                     Everything is working!
+Success! Now you'll see the message: Hello World!
