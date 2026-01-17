@@ -6,6 +6,7 @@ edition = "2021"
 [dependencies]
 bootloader = "0.9" #simplifies the bootloader process
 volatile = "0.2.6"
+spin = "0.9.8"
 
 [package.metadata.bootimage]
 test-args = ["-device", "isa-debug-exit,iobase=0xf4,iosize=0x04", "-display", "none"]
@@ -15,3 +16,7 @@ test-success-exit-code = 33
 name = "sh_os"
 test = false
 bench = false
+
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
